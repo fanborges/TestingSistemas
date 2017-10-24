@@ -31,45 +31,45 @@ class Option():
 class Main:
 
     def main():
-        url = "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker"
-        set = SetAll(url)
-        set.set_all()
+        #~ url = "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker"
+        #~ set = SetAll(url)
+        #~ set.set_all()
 
-        #~ print('#'*80)
-        #~ o = Option()
-        #~ o.option()
-        #~ while True:
-            #~ try:
-                #~ #recibe los argumentos
-                #~ cmd, *args = shlex.split(input('Scraper>>'))
-
-
-                #~ #Comandos técnicos
-                #~ if cmd=='exit' or cmd=='salir':
-                    #~ break
-
-                #~ elif cmd=='cls' or cmd=='clear':
-                    #~ os.system('clear')
-
-                #~ elif cmd=='pwd':
-                    #~ os.system('echo %cd%')
+        print('#'*80)
+        o = Option()
+        o.option()
+        while True:
+            try:
+                #recibe los argumentos
+                cmd, *args = shlex.split(input('Scraper>>'))
 
 
-                #~ elif cmd == 'url':
-                    #~ try:
-                        #~ o.option()
-                    #~ except Exception as inst:
-                        #~ print(inst)
+                #Comandos técnicos
+                if cmd=='exit' or cmd=='salir':
+                    break
+
+                elif cmd=='cls' or cmd=='clear':
+                    os.system('clear')
+
+                elif cmd=='pwd':
+                    os.system('echo %cd%')
+
+
+                elif cmd == 'url':
+                    try:
+                        o.option()
+                    except Exception as inst:
+                        print(inst)
 
 
 
-                    #~ except Exception as inst:
-                        #~ print(inst)
-                #~ else:
-                    #~ print('Comando desconocido: {}'.format(cmd))
+                    except Exception as inst:
+                        print(inst)
+                else:
+                    print('Comando desconocido: {}'.format(cmd))
 
-            #~ except:
-                #~ a = 0
+            except:
+                a = 0
 
 
 
